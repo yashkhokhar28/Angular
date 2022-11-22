@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="card col-md-3 text-center" *ngFor="let stu of students">
+    <img [src]="stu.avatar" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ stu.name }}</h5>
+      <p class="card-text">
+        {{ stu.department }}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ stu.city }}</li>
+      <li class="list-group-item">{{ stu.roll_no }}</li>
+      <li class="list-group-item">{{ stu.username }}</li>
+    </ul>
+    <div class="card-body">
+      <li class="list-group-item">{{ stu.password }}</li>
+    </div>
+  </div>
+</div>

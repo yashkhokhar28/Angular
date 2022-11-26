@@ -1,0 +1,87 @@
+<form [formGroup]="myForm" (ngSubmit)="insert()">
+  <div
+    class="container d-grid gap-3 rounded-5 shadow-sm p-3 mb-5 bg-body rounded my-3"
+  >
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Faculty Name</span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Faculty Name"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        formControlName="FacultyName"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1"
+        >Faculty Designation</span
+      >
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Faculty Designation"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        formControlName="FacultyDesignation"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1"
+        >Faculty Education Qualification</span
+      >
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Faculty Education Qualification"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        formControlName="FacultyEducationQualification"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Faculty Experience</span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Faculty Experience"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        formControlName="FacultyExperience"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1"
+        >Faculty Working Since</span
+      >
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Faculty Working Since"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        formControlName="FacultyWorkingSince"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Faculty Image</span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Faculty Image"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        formControlName="FacultyImage"
+      />
+    </div>
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-outline-primary" type="submit" *ngIf="id == -1">
+        Add Faculty
+      </button>
+      <button class="btn btn-outline-primary" type="submit" *ngIf="id > 0">
+        Edit Faculty
+      </button>
+    </div>
+  </div>
+</form>

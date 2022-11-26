@@ -1,0 +1,57 @@
+<div class="card mb-3" style="max-width: 1540px">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        [src]="data.FacultyImage"
+        class="rounded mx-auto d-block"
+        alt="..."
+        width="200"
+        height="200"
+      />
+    </div>
+    <div class="col-md-8">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <b>Faculty Name : </b>{{ data.FacultyName }}
+        </li>
+        <li class="list-group-item">
+          <b>Faculty Education Qualification:</b>
+          {{ data.FacultyEducationQualification }}
+        </li>
+        <li class="list-group-item">
+          <b>Faculty Experience: </b>{{ data.FacultyExperience }}
+        </li>
+        <li class="list-group-item">
+          <b>Faculty Designation : </b>{{ data.FacultyDesignation }}
+        </li>
+        <li class="list-group-item">
+          <b>Faculty WorkingSince : </b>{{ data.FacultyWorkingSince }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button
+    class="btn btn-outline-warning me-md-2"
+    type="button"
+    routerLink="/faculties/edit/{{ data.FacultyID }}"
+  >
+    Edit
+  </button>
+  <button
+    class="btn btn-outline-danger me-md-2"
+    type="button"
+    (click)="delete()"
+  >
+    Delete
+  </button>
+  <button
+    class="btn btn-outline-primary me-md-2"
+    type="button"
+    routerLink="/faculties"
+  >
+    Back
+  </button>
+</div>

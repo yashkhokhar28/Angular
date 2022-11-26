@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="card col-md-3" *ngFor="let fac of data">
+    <img [src]="fac.FacultyImage" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ fac.FacultyName }}</h5>
+      <p class="card-text">
+        {{ fac.FacultyDesignation }}
+      </p>
+      <div class="d-grid gap-2 col-12 mx-auto">
+        <button
+          class="btn btn-primary"
+          type="button"
+          routerLink="/faculties/{{ fac.FacultyID }}"
+        >
+          More Details
+        </button>
+      </div>
+      <!-- <a routerLink="/faculties/{{ fac.FacultyID }}" class="btn btn-primary"
+        >More Details</a
+      > -->
+    </div>
+  </div>
+</div>
